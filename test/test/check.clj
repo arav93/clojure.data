@@ -1,10 +1,8 @@
 (ns test.check
 (:require [clojure.core.typed :as t]
-                [clojure.repl :as repl]
+                [clojure.data :as data]
                 [test.core]))
 
 
-(repl/apropos "clojure")
-(repl/demunge "clojure.repl$demunge")
-(repl/source-fn 'source)
+(data/diff '[1 2 3] '[1 2])
 
